@@ -29,8 +29,61 @@
         width: 1024px;
       }
 
-      .bookADemo_form_btn {
+      .bookADemo_inputBlock {
+        margin: 10px;
+      }
+
+
+      .bookADemo_dropdown_parentWrapper {
+        position: relative;
+        display: inline-block;
+      }
+
+      .bookADemo_form_dropbtn, .bookADemo_form_input {
+        background-color: #F3F3F5;
+        color: #777582;
+        padding: 16px;
+        font-size: 14px;
+        border: none;
         cursor: pointer;
+        border-radius: 4px;
+        width: 320px;
+        height: 32px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        margin: 20px;
+      }
+
+      .bookADemo_form_dropbtn:hover, .bookADemo_form_dropbtn:focus {
+        background-color: #F3F3F5;
+      }
+      
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        color: black;
+      }
+
+      .active {
+        display: block;
+      }
+
+      .bookADemo_form_btn {
+        background-color: #8800CC;
+        border-radius: 4px;
+        width: 228px;
+        height: 40px;
+        color: #FFFFFF;
+        line-height: 21.84px;
+        font-size: 14px;
+        border: none;
       }
     </style>
   </head>
@@ -47,19 +100,28 @@
       </div>
 
       <div>
-        <h3>Help us customize your demo by ansering the following questions below</h3>
+        <h3>Help us customize your demo by answering the following questions below</h3>
       </div>
 
-        <input class="bookADemo_form" placeholder="Enter your business email">
+      <div class="bookADemo_inputBlock">
+
+        <input class="bookADemo_form_input" placeholder="Enter your business email">
         <!-- TODO: This needs to be a dropdown -->
-        <button class="bookADemo_form_dropbtn" placeholder="Select Size" onclick={dropdownToggler()}>
-        <div id="bookADemo_dropdown">
+        <div class="bookADemo_dropdown_parentWrapper">
+
+          <button class="bookADemo_form_dropbtn" onclick={dropdownToggler()}>Select Size</button>
+          <div id="bookADemo_dropdown_element" class="dropdown-content">
+            <h1>hi</h1>
+            <h1>Yo</h1>
+          </div>
 
         </div>
+
+      </div>
         <script>
         /* When user clicks, toggle content: */
           function dropdownToggler() {
-            document.getElementById("bookADemo_dropdown").classList.toggle("active");
+            document.getElementById("bookADemo_dropdown_element").classList.toggle("active");
             console.log("We clicked");
           };
 
