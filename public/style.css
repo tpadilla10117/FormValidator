@@ -113,8 +113,19 @@ h1, h3 {
     line-height: 21.84px;
     font-size: 14px;
     border: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
 
+.bookADemo_form_btn:hover {
+    background-color: #AA00FF;
+    cursor: pointer;
+}
+
+/* .bookADemo_form_btn:focus {
+    background-color: #8800CC;
+}
+ */
 /* TODO: Need to arrange items in the right order */
 #radiobtn-parentwrapper {
     display: flex;

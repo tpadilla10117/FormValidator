@@ -112,4 +112,12 @@ return (
 
     tester.innerHTML = mappedBtns;
 
-        
+/* Logic for form btn state: */
+    function btnClicked() {
+        let button = document.getElementById('bookADemo_form_btn');
+        console.log("cleicked the button");
+        /* button.style.transform = 'rotate(7deg)'; */
+    };
+
+
+    /* '#8800CC' */
