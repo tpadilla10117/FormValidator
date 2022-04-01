@@ -113,10 +113,11 @@ return (
     tester.innerHTML = mappedBtns;
 
 /* Logic for form btn state: */
+/* TODO: may need to change */
     function btnClicked() {
         let button = document.getElementById('bookADemo_form_btn');
         console.log("cleicked the button");
-        /* button.style.transform = 'rotate(7deg)'; */
+        button.style.backgroundColor = '#8800CC';
     };
 
 

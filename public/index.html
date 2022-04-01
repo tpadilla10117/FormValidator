@@ -27,15 +27,20 @@
         This is a test
       </nav>
 
+      <!-- TODO: Image: calendar SVG -->
+      <div class="image_parent_container">
+        <p>text</p>
+      </div>
+
       <div>
         <h1>Book a Demo</h1>
       </div>
 
-      <div>
-        <h2>Help us customize your demo by answering the following questions below</h2>
-      </div>
+      <form class="bookADemo_form" onsubmit={}>
+        <div class="bookADemo_heading_parent">
+          <h2>Help us customize your demo by answering the following questions below.</h2>
+        </div>
 
-      <form onsubmit={}>
         <div class="bookADemo_inputBlock">
 
           <h3 class="bookADemo_subheader">Business Email</h3>
@@ -59,6 +64,7 @@
             </div>
         </div>
           
+        <div class="bookADemo_radioBlock">
           
           <div>
             <h3 class="bookADemo_subheader">What is the most important thing to you in a solution?</h3>
@@ -69,6 +75,7 @@
           <ul id="radiobtn-parentwrapper"></ul>
           <button id='bookADemo_form_btn' class="bookADemo_form_btn" onclick={btnClicked()}>Continue to Schedule a Time</button>
 
+        </div>
             
       </form>
 

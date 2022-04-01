@@ -31,13 +31,40 @@ h1, h3 {
     width: 1024px;
 }
 
+.image_parent_container {
+    background-color: #F9EDFF;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookADemo_form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    /* border: 1px solid red; */
+    width: 400px;
+}
+
+.bookADemo_heading_parent {
+    display: flex;
+    text-align: center;
+    width: 400px;
+    
+}
+
 .bookADemo_subheader {
     color: #4C4A57;
     font-size: 13px;
 }
 
-.bookADemo_inputBlock {
-    margin: 10px;
+.bookADemo_inputBlock, .bookADemo_radioBlock {
+    /* margin: 10px; */
+    width: 400px;
 }
 
 .bookADemo_dropdown_parentWrapper {
@@ -53,7 +80,7 @@ h1, h3 {
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    width: 320px;
+    width: 400px;
     height: 32px;
     line-height: 20px;
     display: flex;
@@ -83,7 +110,8 @@ h1, h3 {
 .dropdown-content {
     display: none;
     position: absolute;
-    padding: 10px;
+    /* padding: 10px; */
+    margin-top: 2px;
     background-color: #FFFFFF;
     border: 1px #E6E5EA;
     border-radius: 4px;
@@ -95,9 +123,22 @@ h1, h3 {
     color: black;
 }
 
+.radiobtn-parentwrapper {
+   /*  display: flex;
+    align-items: center; */
+}
+
+.bookADemo_dropdown_li {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
 .bookADemo_dropdown, .bookADemo_dropdown_li:hover {
-    color: red;
+    /* color: red; */
     cursor: pointer;
+    background: #F3F3F5;
 }
 
 .active {
