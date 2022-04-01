@@ -52,7 +52,19 @@
 
         <input class="bookADemo_form" placeholder="Enter your business email">
         <!-- TODO: This needs to be a dropdown -->
-        <input class="bookADemo_form" placeholder="Select Size">
+        <button class="bookADemo_form_dropbtn" placeholder="Select Size" onclick={dropdownToggler()}>
+        <div id="bookADemo_dropdown">
+
+        </div>
+        <script>
+        /* When user clicks, toggle content: */
+          function dropdownToggler() {
+            document.getElementById("bookADemo_dropdown").classList.toggle("active");
+            console.log("We clicked");
+          };
+
+        </script>
+        
 
       <!-- TODO: This needs to be 13pt font -->
         <div>
