@@ -10,100 +10,15 @@
       name="description"
       content="A web-application based on Singlestore mockups"
     />
+    <script src="appLogic.js" defer ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Singlestore</title>
-    <style>
-
-      h2 {
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-      }
-      h1, h3 {
-        font-family: 'Lato', sans-serif;
-        font-weight: 700;
-      }
-
-      #bookADemo_pg {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-      }
-      
-      .nav_bar {
-        background-color: #1B1A21;
-        opacity: 0.96;
-        height: 80px;
-        width: 1024px;
-      }
-
-      .bookADemo_subheader {
-        color: #4C4A57;
-        font-size: 13px;
-      }
-
-      .bookADemo_inputBlock {
-        margin: 10px;
-      }
-
-      .bookADemo_dropdown_parentWrapper {
-        position: relative;
-        display: inline-block;
-      }
-
-      .bookADemo_form_dropbtn, .bookADemo_form_input {
-        background-color: #F3F3F5;
-        color: #777582;
-        padding: 16px;
-        font-size: 14px;
-        border: none;
-        cursor: pointer;
-        border-radius: 4px;
-        width: 320px;
-        height: 32px;
-        line-height: 20px;
-        display: flex;
-        align-items: center;
-        /*margin: 20px;*/
-      }
-
-      .bookADemo_form_dropbtn:hover, .bookADemo_form_dropbtn:focus {
-        background-color: #F3F3F5;
-      }
-      
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        color: black;
-      }
-
-      .active {
-        display: block;
-      }
-
-      .bookADemo_form_btn {
-        background-color: #8800CC;
-        border-radius: 4px;
-        width: 228px;
-        height: 40px;
-        color: #FFFFFF;
-        line-height: 21.84px;
-        font-size: 14px;
-        border: none;
-      }
-    </style>
   </head>
+ 
   <body>
     <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
     <main id="bookADemo_pg">
@@ -137,71 +52,7 @@
         </div>
 
       </div>
-        <script>
-        /* When user clicks, toggle content: */
-          function dropdownToggler() {
-            document.getElementById("bookADemo_dropdown_element").classList.toggle("active");
-            console.log("We clicked");
-          };
-
-          /* Logic to Map out Radio btns: */
-          const radioBtns = [ 
-            {
-              id: 1,
-              name: 'Real-time Analytics',
-            },
-            {
-              id: 2,
-              name: 'Query Response Time',
-            },
-            {
-              id: 3,
-              name: 'High Concurrency',
-            },
-            {
-              id: 4,
-              name: 'Fast Data Ingest',
-            },
-            {
-              id: 5,
-              name: 'Scalability',
-            },
-            {
-              id: 6,
-              name: 'Document Storage',
-            },
-            {
-              id: 7,
-              name: 'Full Text Search',
-            },
-            {
-              id: 8,
-              name: 'Price',
-            },
-          ];
-
-
-          /*radioBtns.map( btns => {
-            return (
-              <p key={btns.id}>{btns.name}</p>
-            )
-          }); */
-
-          let tester = document.getElementById('radiobtn-parentwrapper');
-
-          
-
-          const mappedBtns = radioBtns.map( (btns, index) => {
-            return `
-
-              <li key=${index}>${btns.name}</li>
-              
-            `
-          });
-
-          tester.innerHTML = mappedBtns;
-
-        </script>
+        
         
 
       <!-- TODO: This needs to be 13pt font -->
@@ -213,11 +64,8 @@
 
 
         <button class="bookADemo_form_btn">Continue to Schedule a Time</button>
-        
-        <ul id="radiobtn-parentwrapper">
 
-          
-        </ul>
+        <ul id="radiobtn-parentwrapper"></ul>
 
           
         </form>
