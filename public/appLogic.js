@@ -6,9 +6,17 @@ console.log("We clicked");
 };
 
 /* When user clicks outside of dropdown, close it: */
-   /*  window.onclick = function(event) {
-        if()
-    } */
+    window.onclick = function(event) {
+        if(!event.target.matches('.bookADemo_form_dropbtn')) {
+            let dropdowns = document.getElementsByClassName('dropdown-content');
+            for (let i = 0; i < dropdowns.length; i++) {
+                let openDropdown = dropdowns[i];
+                if(openDropdown.classList.contains('active')) {
+                    openDropdown.classList.remove('active');
+                }
+            }
+        }
+    };
 
 /* Logic to Map out Radio btns: */
     const radioBtns = [ 
