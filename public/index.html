@@ -10,10 +10,23 @@
       name="description"
       content="A web-application based on Singlestore mockups"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Singlestore</title>
     <style>
+
+      h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+      }
+      h1, h3 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+      }
+
       #bookADemo_pg {
         display: flex;
         justify-content: center;
@@ -29,10 +42,14 @@
         width: 1024px;
       }
 
+      .bookADemo_subheader {
+        color: #4C4A57;
+        font-size: 13px;
+      }
+
       .bookADemo_inputBlock {
         margin: 10px;
       }
-
 
       .bookADemo_dropdown_parentWrapper {
         position: relative;
@@ -52,7 +69,7 @@
         line-height: 20px;
         display: flex;
         align-items: center;
-        margin: 20px;
+        /*margin: 20px;*/
       }
 
       .bookADemo_form_dropbtn:hover, .bookADemo_form_dropbtn:focus {
@@ -100,15 +117,17 @@
       </div>
 
       <div>
-        <h3>Help us customize your demo by answering the following questions below</h3>
+        <h2>Help us customize your demo by answering the following questions below</h2>
       </div>
 
       <div class="bookADemo_inputBlock">
 
+        <h3 class="bookADemo_subheader">Business Email</h3>
         <input class="bookADemo_form_input" placeholder="Enter your business email">
         <!-- TODO: This needs to be a dropdown -->
         <div class="bookADemo_dropdown_parentWrapper">
 
+          <h3 class="bookADemo_subheader">Business Size</h3>
           <button class="bookADemo_form_dropbtn" onclick={dropdownToggler()}>Select Size</button>
           <div id="bookADemo_dropdown_element" class="dropdown-content">
             <h1>hi</h1>
@@ -130,7 +149,7 @@
 
       <!-- TODO: This needs to be 13pt font -->
         <div>
-          <h2>What is the most important thing to you in a solution?</h2>
+          <h3 class="bookADemo_subheader">What is the most important thing to you in a solution?</h3>
         </div>
 
         <!-- TODO: Radio Buttons -->

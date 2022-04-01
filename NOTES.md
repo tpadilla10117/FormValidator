@@ -1,4 +1,9 @@
 <!-- For Notes within the build: -->
 
 <!-- Stack: -->
-    - Frontend: SCSS, React.js
+    - JS, HTML, CSS
+
+<!-- Fonts / Typography: -->
+    - Lato: 700, Bold
+    - Lato: 400, Regular
+    - FreightSansLFPro
