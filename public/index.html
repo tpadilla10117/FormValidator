@@ -144,6 +144,63 @@
             console.log("We clicked");
           };
 
+          /* Logic to Map out Radio btns: */
+          const radioBtns = [ 
+            {
+              id: 1,
+              name: 'Real-time Analytics',
+            },
+            {
+              id: 2,
+              name: 'Query Response Time',
+            },
+            {
+              id: 3,
+              name: 'High Concurrency',
+            },
+            {
+              id: 4,
+              name: 'Fast Data Ingest',
+            },
+            {
+              id: 5,
+              name: 'Scalability',
+            },
+            {
+              id: 6,
+              name: 'Document Storage',
+            },
+            {
+              id: 7,
+              name: 'Full Text Search',
+            },
+            {
+              id: 8,
+              name: 'Price',
+            },
+          ];
+
+
+          /*radioBtns.map( btns => {
+            return (
+              <p key={btns.id}>{btns.name}</p>
+            )
+          }); */
+
+          let tester = document.getElementById('radiobtn-parentwrapper');
+
+          
+
+          const mappedBtns = radioBtns.map( (btns, index) => {
+            return `
+
+              <li key=${index}>${btns.name}</li>
+              
+            `
+          });
+
+          tester.innerHTML = mappedBtns;
+
         </script>
         
 
@@ -156,6 +213,11 @@
 
 
         <button class="bookADemo_form_btn">Continue to Schedule a Time</button>
+        
+        <ul id="radiobtn-parentwrapper">
+
+          
+        </ul>
 
           
         </form>
