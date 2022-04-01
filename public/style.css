@@ -61,6 +61,20 @@ h1, h3 {
     /*margin: 20px;*/
 }
 
+.bookADemo_form_dropbtn {
+    position: relative;
+}
+/* TODO: need to style arrow correctly */
+/* .btnicon_container {
+    border: 1px red;
+    
+} */
+
+.btnicon {
+    position: absolute;
+    z-index: 10;
+}
+
 .bookADemo_form_dropbtn:hover, .bookADemo_form_dropbtn:focus {
     background-color: #F3F3F5;
 }
