@@ -7,42 +7,45 @@
 h2 {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-  }
-  h1, h3 {
+    font-size: 16px;
+    color: #777582;
+}
+
+h1, h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-  }
+}
 
-  #bookADemo_pg {
+#bookADemo_pg {
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-  }
-  
-  .nav_bar {
+}
+
+.nav_bar {
     background-color: #1B1A21;
     opacity: 0.96;
     height: 80px;
     width: 1024px;
-  }
+}
 
-  .bookADemo_subheader {
+.bookADemo_subheader {
     color: #4C4A57;
     font-size: 13px;
-  }
+}
 
-  .bookADemo_inputBlock {
+.bookADemo_inputBlock {
     margin: 10px;
-  }
+}
 
-  .bookADemo_dropdown_parentWrapper {
+.bookADemo_dropdown_parentWrapper {
     position: relative;
     display: inline-block;
-  }
+}
 
-  .bookADemo_form_dropbtn, .bookADemo_form_input {
+.bookADemo_form_dropbtn, .bookADemo_form_input {
     background-color: #F3F3F5;
     color: #777582;
     padding: 16px;
@@ -56,29 +59,38 @@ h2 {
     display: flex;
     align-items: center;
     /*margin: 20px;*/
-  }
+}
 
-  .bookADemo_form_dropbtn:hover, .bookADemo_form_dropbtn:focus {
+.bookADemo_form_dropbtn:hover, .bookADemo_form_dropbtn:focus {
     background-color: #F3F3F5;
-  }
-  
+}
 
-  .dropdown-content {
+
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px #E6E5EA;
+    border-radius: 4px;
+    width: 320px;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     color: black;
-  }
+}
 
-  .active {
+.bookADemo_dropdown, .bookADemo_dropdown_li:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.active {
     display: block;
-  }
+}
 
-  .bookADemo_form_btn {
+.bookADemo_form_btn {
     background-color: #8800CC;
     border-radius: 4px;
     width: 228px;
@@ -87,4 +99,19 @@ h2 {
     line-height: 21.84px;
     font-size: 14px;
     border: none;
-  }
+}
+
+/* TODO: Need to arrange items in the right order */
+#radiobtn-parentwrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.radiobtn_content {
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
