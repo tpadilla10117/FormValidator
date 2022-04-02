@@ -41,6 +41,10 @@ h1, h3 {
     align-items: center;
 }
 
+.calendardays_img {
+    fill: linear-gradient(to bottom,#AA00FF, #00A3D7);
+}
+
 .bookADemo_form {
     display: flex;
     flex-direction: column;
@@ -50,7 +54,7 @@ h1, h3 {
     width: 400px;
 }
 
-.bookADemo_heading_parent {
+.bookADemo_subheading_parent {
     display: flex;
     text-align: center;
     width: 400px;
