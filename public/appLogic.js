@@ -81,12 +81,15 @@ console.log("We clicked");
         },
     ];
 
+    /* export let dropdownArr = []; */
+
 /* When user clicks, toggle content: */
 function dropdownHandler(input) {
     console.log("Ran")
     /* event.preventDefault(); */
     /* let element = document.getElementById("bookADemo_dropdown_li"); */
     console.log("The clicked element: ", input);
+    dropdownArr.push(input);
     return input;
 };
 
