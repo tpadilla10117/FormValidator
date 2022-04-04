@@ -128,11 +128,6 @@ h1, h3 {
     color: black;
 }
 
-.radiobtn-parentwrapper {
-   /*  display: flex;
-    align-items: center; */
-}
-
 .bookADemo_dropdown_li {
     height: 32px;
     display: flex;
@@ -174,9 +169,11 @@ h1, h3 {
  */
 /* TODO: Need to arrange items in the right order */
 #radiobtn-parentwrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 30px;
+    /* grid-gap: 1rem; */
+    border: 1px solid red;
 }
 
 .radiobtn_content {

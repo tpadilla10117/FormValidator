@@ -26,27 +26,27 @@ console.log("We clicked");
         },
         {
             id: 2,
-            name: 'Query Response Time',
-        },
-        {
-            id: 3,
-            name: 'High Concurrency',
-        },
-        {
-            id: 4,
-            name: 'Fast Data Ingest',
-        },
-        {
-            id: 5,
             name: 'Scalability',
         },
         {
-            id: 6,
+            id: 3,
+            name: 'Query Response Time',
+        },
+        {
+            id: 4,
             name: 'Document Storage',
         },
         {
-            id: 7,
+            id: 5,
+            name: 'High Concurrency',
+        },
+        {
+            id: 6,
             name: 'Full Text Search',
+        },
+        {
+            id: 7,
+            name: 'Fast Data Ingest',
         },
         {
             id: 8,
