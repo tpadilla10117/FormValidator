@@ -42,7 +42,8 @@ h1, h3 {
 }
 
 .calendardays_img {
-    fill: linear-gradient(to bottom,#AA00FF, #00A3D7);
+    /* fill: linear-gradient(to bottom,#AA00FF, #00A3D7); */
+    /* background-image: linear-gradient(red, yellow); */
 }
 
 .bookADemo_form {
