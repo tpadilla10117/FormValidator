@@ -81,11 +81,20 @@ console.log("We clicked");
         },
     ];
 
+/* When user clicks, toggle content: */
+function dropdownHandler(input) {
+    console.log("Ran")
+    /* event.preventDefault(); */
+    /* let element = document.getElementById("bookADemo_dropdown_li"); */
+    console.log("The clicked element: ", input);
+    return input;
+};
+
 /* Logic to map out Business Size dropdown: */
     let businessDropdown = document.getElementById('bookADemo_dropdown');
     const mappedItems = dropDownItems.map ((items, index) => {
         return `
-            <li class='bookADemo_dropdown_li' key=${index}>${items.name}</li>
+            <li id='bookADemo_dropdown_li' class='bookADemo_dropdown_li' value=${items.name} key=${index} onclick={dropdownHandler('${items.name}')}>${items.name}</li>
         `
     }).join('');
 

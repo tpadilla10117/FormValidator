@@ -29,6 +29,14 @@ h1, h3 {
     opacity: 0.96;
     height: 80px;
     width: 1024px;
+    display: flex;
+    align-items: center;
+}
+
+.singlestore_img {
+    height: 28.35px;
+    width: 135.52px;
+    margin-left: 24px;
 }
 
 .image_parent_container {
@@ -97,18 +105,22 @@ h1, h3 {
     /*margin: 20px;*/
 }
 
+input.bookADemo_form_input:focus {
+    border: 1px solid #C550FF;
+    
+    background-color: yellow;
+
+}
+
 .bookADemo_form_dropbtn {
     position: relative;
 }
-/* TODO: need to style arrow correctly */
-/* .btnicon_container {
-    border: 1px red;
-    
-} */
 
 .btnicon {
     position: absolute;
     z-index: 10;
+    left: 372px;
+    
 }
 
 .bookADemo_form_dropbtn:hover, .bookADemo_form_dropbtn:focus {
@@ -119,12 +131,12 @@ h1, h3 {
 .dropdown-content {
     display: none;
     position: absolute;
-    /* padding: 10px; */
-    margin-top: 2px;
+    /* padding: 5px; */
+    margin-top: 5px;
     background-color: #FFFFFF;
     border: 1px #E6E5EA;
     border-radius: 4px;
-    width: 320px;
+    width: 400px;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -136,11 +148,10 @@ h1, h3 {
     height: 32px;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px 0px 20px 15px;
 }
 
 .bookADemo_dropdown, .bookADemo_dropdown_li:hover {
-    /* color: red; */
     cursor: pointer;
     background: #F3F3F5;
 }
