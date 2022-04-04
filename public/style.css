@@ -28,7 +28,7 @@ h1, h3 {
     background-color: #1B1A21;
     opacity: 0.96;
     height: 80px;
-    width: 1024px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
