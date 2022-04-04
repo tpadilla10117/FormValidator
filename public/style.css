@@ -39,6 +39,7 @@ h1, h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 65px;
 }
 
 .calendardays_img {
@@ -59,12 +60,14 @@ h1, h3 {
     display: flex;
     text-align: center;
     width: 400px;
+    margin: 25px;
     
 }
 
 .bookADemo_subheader {
     color: #4C4A57;
     font-size: 13px;
+    margin-bottom: 5px;
 }
 
 .bookADemo_inputBlock, .bookADemo_radioBlock {
@@ -75,6 +78,7 @@ h1, h3 {
 .bookADemo_dropdown_parentWrapper {
     position: relative;
     display: inline-block;
+    margin: 25px 0px 25px 0px;
 }
 
 .bookADemo_form_dropbtn, .bookADemo_form_input {
@@ -145,6 +149,12 @@ h1, h3 {
     display: block;
 }
 
+.bookADemo_btn_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
 .bookADemo_form_btn {
     background-color: #8800CC;
     border-radius: 4px;
@@ -172,8 +182,7 @@ h1, h3 {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-auto-rows: 30px;
-    /* grid-gap: 1rem; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .radiobtn_content {
@@ -182,4 +191,17 @@ h1, h3 {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+/* TODO: Need to resize radio button selector */
+/* input[type="radio"] {
+    background-color: blue;
+} */
+
+.radiobtn_label {
+    padding-left: 5px;
 }

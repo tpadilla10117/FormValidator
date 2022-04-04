@@ -104,8 +104,8 @@ return (
 
     const mappedBtns = radioBtns.map( (btns, index) => {
     return `<li class='radiobtn_content' key=${index}>
-                <input class='radiobtn' type='radio' key=${index} value=${btns.name}/>
-                <label key=${index} for=${btns.name}>${btns.name}</label> 
+                <input class='radiobtn_input' type='radio' key=${index} value=${btns.name}/>
+                <label key=${index} class='radiobtn_label' for=${btns.name}>${btns.name}</label> 
             </li>
     `
     }).join('');
