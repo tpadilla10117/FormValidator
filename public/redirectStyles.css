@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#bookADemo_pg {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.nav_bar {
+    background-color: #1B1A21;
+    opacity: 0.96;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.singlestore_img {
+    height: 28.35px;
+    width: 135.52px;
+    margin-left: 24px;
+}
