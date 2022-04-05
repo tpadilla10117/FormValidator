@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* TODO: scroll snap align */
+
 h2 {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -181,6 +183,10 @@ input.bookADemo_form_input:focus {
 .bookADemo_form_btn:hover {
     background-color: #AA00FF;
     cursor: pointer;
+}
+
+.bookADemo_form_btn:before {
+   
 }
 
 /* .bookADemo_form_btn:focus {
