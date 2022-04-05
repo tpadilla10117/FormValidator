@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #777582;
+}
+
+h1, h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
 #bookADemo_pg {
     display: flex;
     justify-content: center;
@@ -21,8 +33,52 @@
     align-items: center;
 }
 
+.info_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .singlestore_img {
     height: 28.35px;
     width: 135.52px;
     margin-left: 24px;
+}
+
+.image_parent_container {
+    background-color: #F9EDFF;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 65px;
+}
+
+.bookADemo_heading_parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_h1 {
+    margin-bottom: 10px;
+}
+
+.bookADemo_subheading_parent {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 400px;
+    margin: 25px;
+    
+}
+
+.bookADemo_subheader {
+    color: #4C4A57;
+    font-size: 13px;
+    margin-bottom: 5px;
 }

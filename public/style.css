@@ -50,11 +50,6 @@ h1, h3 {
     margin: 65px;
 }
 
-.calendardays_img {
-    /* fill: linear-gradient(to bottom,#AA00FF, #00A3D7); */
-    /* background-image: linear-gradient(red, yellow); */
-}
-
 .bookADemo_form {
     display: flex;
     flex-direction: column;
