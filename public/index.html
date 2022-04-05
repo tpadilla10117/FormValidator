@@ -11,6 +11,23 @@
       content="A web-application based on Singlestore mockups"
     />
     <script src="appLogic.js" defer ></script>
+    <script>
+      /* This validates an email: */
+      function validateEmail(email) {
+        if(!email) return 'An email is required.';
+
+        const isValidEmail = /^\S+@\S+$/g;
+        if(!isValidEmail.test(email) ){
+          return 'Please enter a valid email.'
+        }
+        return '';
+      }
+
+      /* This handles a form submit: */
+
+
+
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -53,7 +70,8 @@
 
           <h3 class="bookADemo_subheader">Business Email</h3>
           
-            <input class="bookADemo_form_input" placeholder="Enter your business email" type="text" required>
+          <!-- TODO: need to grab form data -->
+            <input class="bookADemo_form_input" placeholder="Enter your business email" type="text" name="email" required>
             
             <div class="bookADemo_dropdown_parentWrapper">
 
