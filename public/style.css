@@ -86,7 +86,7 @@ h1, h3 {
 
 .bookADemo_form_dropbtn, .bookADemo_form_input {
     background-color: #F3F3F5;
-    color: #777582;
+    color: #1B1A21;
     padding: 16px;
     font-size: 14px;
     border: none;
@@ -100,10 +100,14 @@ h1, h3 {
     /*margin: 20px;*/
 }
 
+input.bookADemo_form_input::placeholder {
+    color: #777582;
+}
+
 input.bookADemo_form_input:focus {
+    outline: none;
     border: 1px solid #C550FF;
-    
-    background-color: yellow;
+    color: #1B1A21;
 
 }
 
