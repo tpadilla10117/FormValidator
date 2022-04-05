@@ -133,4 +133,40 @@ return (
     };
 
 
-    /* '#8800CC' */
+/* Form Validation Logic: */
+
+    let id = (id) => document.getElementById(id);
+    let classes = (classes) => document.getElementsByClassName(classes);
+    let form = id('bookADemo_form');
+    let email = id('bookADemo_form_input');
+    let errorMsg = classes("error");
+    let successIcon = classes("success-icon");
+    let failureIcon = classes("failure-icon");
+
+    let validationHandling = (id, serial, message) => {
+        if (id.value.trim() === "") {
+            errorMsg[serial].innerHTML = message;
+            id.style.border = "1px solid red";
+            
+            // icons
+            failureIcon[serial].style.opacity = "1";
+            successIcon[serial].style.opacity = "0";
+          } 
+          
+          else {
+            errorMsg[serial].innerHTML = "";
+            id.style.border = "1px solid green";
+            
+            // icons
+            failureIcon[serial].style.opacity = "0";
+            successIcon[serial].style.opacity = "1";
+          }
+    }
+    
+    /* Submit event listener: */
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log("Submitted a form")
+        validationHandling(email, 0, "Email cannot be blank");
+        console.log("Form data: ",form )
+    })

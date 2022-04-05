@@ -80,6 +80,31 @@ h1, h3 {
     width: 400px;
 }
 
+.bookADemo_inputBlock {
+    position: relative;
+}
+
+.bookADemo_form div i {
+    /* padding: 10px; */
+    position: absolute;
+    top: 29px;
+    right: 10px;
+}
+
+.failure-icon {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+.failure-icon, .success-icon {
+    right: 0;
+    opacity: 0;
+}
+
+
 /* .bookADemo_radioBlock:nth-child(3) {
     display: flex;
     flex-direction: column;
