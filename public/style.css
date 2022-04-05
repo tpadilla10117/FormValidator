@@ -80,6 +80,12 @@ h1, h3 {
     width: 400px;
 }
 
+/* .bookADemo_radioBlock:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
 .bookADemo_dropdown_parentWrapper {
     position: relative;
     display: inline-block;
@@ -165,6 +171,9 @@ input.bookADemo_form_input:focus {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    position: relative;
+    align-items: center;
+    /* width: 228px */
 }
 
 .bookADemo_form_btn {
@@ -178,10 +187,21 @@ input.bookADemo_form_input:focus {
     border: none;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
 }
 
-.bookADemo_form_btn:hover {
+/* .bookADemo_form_btnicon:hover,  */.bookADemo_form_btn:hover {
     background-color: #AA00FF;
+    cursor: pointer;
+}
+
+.bookADemo_form_btnicon {
+    position: absolute;
+    z-index: 10;
+    left: 290px;
     cursor: pointer;
 }
 
@@ -193,7 +213,7 @@ input.bookADemo_form_input:focus {
     background-color: #8800CC;
 }
  */
-/* TODO: Need to arrange items in the right order */
+
 #radiobtn-parentwrapper {
     display: grid;
     grid-template-columns: 50% 50%;
