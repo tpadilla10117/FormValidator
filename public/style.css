@@ -117,7 +117,7 @@ h1, h3 {
     margin: 25px 0px 25px 0px;
 }
 
-.bookADemo_form_dropbtn, .bookADemo_form_input {
+.bookADemo_form_input, #bookADemo_dropdown {
     background-color: #F3F3F5;
     color: #1B1A21;
     padding: 16px;
@@ -130,6 +130,26 @@ h1, h3 {
     display: flex;
     align-items: center;
     /*margin: 20px;*/
+}
+
+.bookADemo_form_textBox {
+    background-color: #F3F3F5;
+    color: #1B1A21;
+    /* padding: 16px; */
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    width: 400px;
+    height: 32px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+}
+
+#bookADemo_dropdown {
+    outline: none;
 }
 
 .bookADemo_form_dropbtn {
@@ -154,6 +174,7 @@ input.bookADemo_form_input:focus {
 
 .bookADemo_form_dropbtn {
     position: relative;
+    outline: nonel
 }
 
 .btnicon {
@@ -167,8 +188,11 @@ input.bookADemo_form_input:focus {
     background-color: #F3F3F5;
 }
 
+.bookADemo_form_dropbtn.active .dropdownOptions {
+    display: block;
+}
 
-.dropdown-content {
+.dropdownOptions {
     display: none;
     position: absolute;
     /* padding: 5px; */
@@ -190,6 +214,10 @@ input.bookADemo_form_input:focus {
     align-items: center;
     padding: 20px 0px 20px 15px;
 }
+
+/* .bookADemo_form_dropbtn option {
+    color: red;
+} */
 
 .bookADemo_dropdown, .bookADemo_dropdown_li:hover {
     cursor: pointer;

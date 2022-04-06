@@ -99,32 +99,27 @@ function dropdownHandler(input) {
     }
 
 /* Logic to map out Business Size dropdown: */
-    let businessDropdown = document.getElementById('bookADemo_dropdown');
+    let businessDropdown = document.getElementById('dropdownOptions');
+
+    let dropdownShow = document.querySelector('.bookADemo_form_dropbtn');
+    dropdownShow.onclick = function() {
+        dropdownShow.classList.toggle('active');
+    };
+
+    function show(text) {
+        console.log("We clicked the dropdown item")
+        console.log("Value from dropdownValue: ", text);
+        document.querySelector('.bookADemo_form_textBox').value = text
+    };
+
     const mappedItems = dropDownItems.map ((items, index) => {
         return `
-            <option id='bookADemo_dropdown_li' class='bookADemo_dropdown_li' key=${index} value='${items.name}' name='drop' onclick={dropdownValue(value)} />
-          
+            <li id='bookADemo_dropdown_li' class='bookADemo_dropdown_li' value='${items.name}' name='dropdownSelector' key=${index} onclick={show('${items.name}')}>${items.name}</li>
         `
     }).join('');
 
-   /*  <li id='bookADemo_dropdown_li' class='bookADemo_dropdown_li' key=${index} onclick={dropdownHandler('${items.name}')} >
-                <input value='${items.name}' name='drop' key=${index} onclick={dropdownValue(value)} />
-            </li> */
-
-    /* const mappedItems = dropDownItems.map ((items, index) => {
-        return `
-            <li id='bookADemo_dropdown_li' class='bookADemo_dropdown_li' value='${items.name}' name='dropdownSelector' key=${index} onclick={dropdownHandler('${items.name}')}>${items.name}</li>
-        `
-    }).join(''); */
-
     businessDropdown.innerHTML = mappedItems;
 
-
-/*radioBtns.map( btns => {
-return (
-    <p key={btns.id}>{btns.name}</p>
-)
-}); */
 
 /* Logic to map out Radio buttons: */
 
@@ -221,5 +216,8 @@ return (
 
             console.log("This is unqualified")
             window.location.href = "./unqualifiedPg.html";
-        };
-    })
+
+        } else if(form['email'].value && form['selector'].value && form['drop'].value) {
+            window.location.href = "./qualifiedPg.html"
+        }
+    });

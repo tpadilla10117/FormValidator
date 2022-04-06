@@ -90,7 +90,6 @@
 
           <h3 class="bookADemo_subheader">Business Email</h3>
           
-          <!-- TODO: need to grab form data -->
             <input class="bookADemo_form_input error" id="bookADemo_form_input" placeholder="Enter your business email" type="text" name="email" pattern="^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+.[a-zA-Z0-9-.]{2,61}$" oninvalid="setCustomValidity(`Please make sure this isn't a personal email address`), console.log('hi'), style='border:1px solid red', setIcon() " onchange="try{setCustomValidity('')}catch(e){}" >
             <i class="fas fa-exclamation-circle failure-icon"></i>
             <i class="far fa-check-circle success-icon"></i>
@@ -99,18 +98,29 @@
 
               <h3 class="bookADemo_subheader">Business Size</h3>
               <!-- TODO: Need to grab input data -->
-              <!-- <div class="bookADemo_form_dropbtn" onclick={dropdownToggler()}>
+              <!-- onclick={dropdownToggler()} -->
+              <div class="bookADemo_form_dropbtn">
                   
-                  Select Size
+                  <input placeholder="Select Size" class="bookADemo_form_textBox" readonly>
+                  <ul class="dropdownOptions" id="dropdownOptions">
+
+                  </ul>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class='btnicon' height='14' width='14' fill="#777582" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
                 
-              </div> -->
-              <!-- TODO: class was originally dropdown-content -->
-              <div id="bookADemo_dropdown_element" class="bookADemo_form_dropbtn">
-                <!-- <ul id="bookADemo_dropdown"></ul> -->
-                <input list="bookADemo_dropdown" name='drop' />
-                <datalist id="bookADemo_dropdown" >
               </div>
+              <!-- TODO: class was originally dropdown-content -->
+              <!-- <div id="bookADemo_dropdown_element" class="bookADemo_dropdown_element"> -->
+                <!-- <ul id="bookADemo_dropdown"></ul> -->
+                <!-- <div id="bookADemo_dropdown">
+                  <input type='text' class="textBox" placeholder="Select Size" readonly>
+                  <div class="option" id="option">
+
+                  </div>
+                </div> -->
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class='btnicon' height='14' width='14' fill="#777582" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+                <input list="bookADemo_dropdown" name='drop' class="bookADemo_form_dropbtn" placeholder="Select Size"  />
+                <datalist id="bookADemo_dropdown" > -->
+              <!-- </div> -->
 
             </div>
         </div>
@@ -121,13 +131,12 @@
             <h3 class="bookADemo_subheader">What is the most important thing to you in a solution?</h3>
           </div>
 
-          <!-- TODO: Radio Buttons -->
           <div id="radiobtn-container">
             <ul id="radiobtn-parentwrapper"></ul>
           </div>
 
           <div class="bookADemo_btn_container">
-            <!-- <button id="bookADemo_form_btn" class="bookADemo_form_btn" onclick={btnClicked()}>Continue to Schedule a Time</button> -->
+       
             <input id="bookADemo_form_btn" class="bookADemo_form_btn" value="Continue to Schedule a Time" type="submit">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height='14' width='14' fill="#FFFFFF" class="bookADemo_form_btnicon"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"/></svg>
@@ -137,15 +146,7 @@
         </div>
             
       </form>
-<!-- TODO: need to make the page redirects -->
-      <section class="pages">
-        <div class="unqualified page is-active" data-page="1">
-          <!-- <a href="unqualifiedPg.html">Yo</a> -->
-        </div>
-
-      </section>
       
-
     </main>
   </body>
 </html>
