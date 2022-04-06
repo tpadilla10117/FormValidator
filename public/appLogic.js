@@ -144,18 +144,13 @@ return (
     let failureIcon = classes("failure-icon");
     let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
 
-
-  /*   document
-  .getElementById("Email").setAttribute(
-    "pattern",
-    "^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+.[a-zA-Z0-9-.]{2,61}$"
-  ).setAttribute(
-    "oninvalid",
-    "setCustomValidity('Please enter business email')"
-  ).setAttribute("onchange", "try{setCustomValidity('')}catch(e){}')") */
-
+/* TODO: This runs in the email input if Regex is false: */
+    function setIcon() {
+        failureIcon[0].style.opacity = "1";
+    }
 
     let validationHandling = (id, serial, message) => {
+        
         if (id.value.trim() === "" ) {
             errorMsg[serial].innerHTML = message;
             id.style.border = "1px solid red";

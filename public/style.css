@@ -141,6 +141,10 @@ input.bookADemo_form_input::placeholder {
     color: #777582;
 }
 
+input.bookADemo_form_input:invalid {
+    border-color: red;
+}
+
 input.bookADemo_form_input:focus {
     outline: none;
     border: 1px solid #C550FF;

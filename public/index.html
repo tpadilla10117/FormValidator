@@ -91,7 +91,7 @@
           <h3 class="bookADemo_subheader">Business Email</h3>
           
           <!-- TODO: need to grab form data -->
-            <input class="bookADemo_form_input error" id="bookADemo_form_input" placeholder="Enter your business email" type="text" name="email" pattern="^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+.[a-zA-Z0-9-.]{2,61}$" oninvalid="setCustomValidity(`Please make sure this isn't a personal email address`) " onchange="try{setCustomValidity('')}catch(e){}" >
+            <input class="bookADemo_form_input error" id="bookADemo_form_input" placeholder="Enter your business email" type="text" name="email" pattern="^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+.[a-zA-Z0-9-.]{2,61}$" oninvalid="setCustomValidity(`Please make sure this isn't a personal email address`), console.log('hi'), style='border:1px solid red', setIcon() " onchange="try{setCustomValidity('')}catch(e){}" >
             <i class="fas fa-exclamation-circle failure-icon"></i>
             <i class="far fa-check-circle success-icon"></i>
 
