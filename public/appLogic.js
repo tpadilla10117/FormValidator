@@ -81,15 +81,13 @@ console.log("We clicked");
         },
     ];
 
-    /* export let dropdownArr = []; */
-
 /* When user clicks, toggle content: */
 function dropdownHandler(input) {
     console.log("Ran")
     /* event.preventDefault(); */
     /* let element = document.getElementById("bookADemo_dropdown_li"); */
     console.log("The clicked element: ", input);
-    dropdownArr.push(input);
+    /* dropdownArr.push(input); */
     return input;
 };
 
@@ -113,10 +111,15 @@ return (
 /* Logic to map out Radio buttons: */
 
     let tester = document.getElementById('radiobtn-parentwrapper');
+    function radioHandler(value) {
+        console.log('clicked');
+        console.log(value)
+    }
 
+/* TODO: need to make sure getting right inputs : */
     const mappedBtns = radioBtns.map( (btns, index) => {
     return `<li class='radiobtn_content' key=${index}>
-                <input class='radiobtn_input' type='radio' key=${index} value=${btns.name} name="selector"/>
+                <input class='radiobtn_input' type='radio' key=${index} value=${btns.name} name="selector" onclick={radioHandler('${btns.name}')} />
                 <label key=${index} class='radiobtn_label' for=${btns.name}>${btns.name}</label> 
             </li>
     `
@@ -143,6 +146,9 @@ return (
     let successIcon = classes("success-icon");
     let failureIcon = classes("failure-icon");
     let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+
+    let formSelector = document.querySelector('bookADemo_form');
+    let formData = new FormData(form);
 
 /* TODO: This runs in the email input if Regex is false: */
     function setIcon() {
@@ -186,5 +192,5 @@ return (
         event.preventDefault();
         console.log("Submitted a form")
         validationHandling(email, 0, "Email cannot be blank");
-        console.log("Form data: ",form )
+        console.log("Form data: ",formData )
     })
