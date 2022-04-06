@@ -214,8 +214,12 @@ return (
         validationHandling(email, 0, "Email cannot be blank");
         console.log("Form data: ",formData )
 
-        if(form['selector'].value === 'Document Storage' || form['selector'].value === 'Price' || form['selector'].value === 'Full Text Search') {
+        if(form['selector'].value === 'Document Storage' 
+            || form['selector'].value === 'Price' 
+            || form['selector'].value === 'Full Text Search'
+            || form['drop'].value === '1-10') {
+
             console.log("This is unqualified")
-            
+            window.location.href = "./unqualifiedPg.html";
         };
     })
