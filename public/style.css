@@ -57,8 +57,23 @@ h1, h3 {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    /* border: 1px solid red; */
     width: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+    .bookADemo_form {
+        overflow-x: scroll;
+        width: fit-content;
+    }
+
+    #bookADemo_pg {
+        align-items: flex-start;
+        width: fit-content;
+    }
+    
+    /* .nav_bar {
+        overflow-x: visible;
+    } */
 }
 
 .bookADemo_subheading_parent {
@@ -76,7 +91,6 @@ h1, h3 {
 }
 
 .bookADemo_inputBlock, .bookADemo_radioBlock {
-    /* margin: 10px; */
     width: 400px;
 }
 
@@ -85,7 +99,6 @@ h1, h3 {
 }
 
 .bookADemo_form div i {
-    /* padding: 10px; */
     position: absolute;
     top: 29px;
     right: 10px;
@@ -103,13 +116,6 @@ h1, h3 {
     right: 0;
     opacity: 0;
 }
-
-
-/* .bookADemo_radioBlock:nth-child(3) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 
 .bookADemo_dropdown_parentWrapper {
     position: relative;
@@ -192,7 +198,6 @@ input.bookADemo_form_input:focus {
 .dropdownOptions {
     display: none;
     position: absolute;
-    /* padding: 5px; */
     margin-top: 5px;
     background-color: #FFFFFF;
     border: 1px #E6E5EA;
@@ -227,7 +232,6 @@ input.bookADemo_form_input:focus {
     margin-top: 40px;
     position: relative;
     align-items: center;
-    /* width: 228px */
 }
 
 .bookADemo_form_btn {
@@ -247,7 +251,7 @@ input.bookADemo_form_input:focus {
     padding-left: 20px;
 }
 
-/* .bookADemo_form_btnicon:hover,  */.bookADemo_form_btn:hover {
+.bookADemo_form_btn:hover {
     background-color: #AA00FF;
     cursor: pointer;
 }
@@ -259,20 +263,11 @@ input.bookADemo_form_input:focus {
     cursor: pointer;
 }
 
-.bookADemo_form_btn:before {
-   
-}
-
-/* .bookADemo_form_btn:focus {
-    background-color: #8800CC;
-}
- */
 
 #radiobtn-parentwrapper {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-auto-rows: 30px;
-    /* border: 1px solid red; */
 }
 
 .radiobtn_content {
@@ -284,21 +279,13 @@ input.bookADemo_form_input:focus {
     display: flex;
     align-items: center;
     
-    
 }
 
-/* TODO: Need to resize radio button selector */
-/* input[type="radio"] {
-    background-color: blue;
-} */
 
 .radiobtn_label {
     padding-left: 10px;
 }
 
-/* .radiobtn_input:checked {
-    border: 6px solid black;
-} */
 
 input[type="radio"] {
   /* Remove the standard appearance: */
