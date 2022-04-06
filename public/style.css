@@ -301,9 +301,10 @@ input.bookADemo_form_input:focus {
 } */
 
 input[type="radio"] {
-  /* Add if not using autoprefixer */
-/*   -webkit-appearance: none;
-  appearance: none; */
+  /* Remove the standard appearance: */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   /* For iOS < 15 to remove gradient background */
   background-color: #FFF;
   /* Not removed via appearance */
@@ -317,22 +318,12 @@ input[type="radio"] {
   margin-top: 1px;
   display: grid;
   place-content: center;
+  cursor: pointer;
 }
 
-/* input[type="radio"]::before {
-    content: "";
-    width: 0.65em;
-    height: 0.65em;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-    background-color: #8800CC;
-  }
-  
-  input[type="radio"]:checked::before {
-    transform: scale(1);
-  } */
+input[type="radio"]:checked {
 
-  input:checked {
-      border: red;
-  }
+    background: radial-gradient(#FFF 3px, #8800CC 10%, transparent 40%, transparent);
+    background-color: #8800CC;
+
+}
