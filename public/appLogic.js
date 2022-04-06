@@ -91,13 +91,27 @@ function dropdownHandler(input) {
     return input;
 };
 
+    function dropdownHandler(value) {
+        console.log("We clicked the dropdown item")
+        console.log(value);
+        
+    }
+
 /* Logic to map out Business Size dropdown: */
     let businessDropdown = document.getElementById('bookADemo_dropdown');
     const mappedItems = dropDownItems.map ((items, index) => {
         return `
-            <li id='bookADemo_dropdown_li' class='bookADemo_dropdown_li' value=${items.name} key=${index} onclick={dropdownHandler('${items.name}')}>${items.name}</li>
+            <li id='bookADemo_dropdown_li' class='bookADemo_dropdown_li' value='${items.name}' name='dropdownSelector' key=${index} onclick={dropdownHandler('${items.name}')}>
+                <input type='button' value='${items.name}' name='dropdownselector' key=${index} onclick={dropdownHandler(value)}/>
+            </li>
         `
     }).join('');
+
+    /* const mappedItems = dropDownItems.map ((items, index) => {
+        return `
+            <li id='bookADemo_dropdown_li' class='bookADemo_dropdown_li' value='${items.name}' name='dropdownSelector' key=${index} onclick={dropdownHandler('${items.name}')}>${items.name}</li>
+        `
+    }).join(''); */
 
     businessDropdown.innerHTML = mappedItems;
 
@@ -189,7 +203,15 @@ return (
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("Submitted a form")
+        console.log("An email address from submitted form: ", form['email'].value)
+        console.log("The radio selection: ", form['selector'].value)
+        console.log("The dropdown value: ", form['dropdownselector'].value);
+        
         validationHandling(email, 0, "Email cannot be blank");
         console.log("Form data: ",formData )
-        console.log("Event: ", event.target)
+        /* console.log("Event: ", event.target) */
+
+        if(form['selector'].value === 'Document Storage' || form['selector'].value === 'Price' || form['selector'].value === 'Full Text Search') {
+            console.log("This is unqualified")
+        };
     })
