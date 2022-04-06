@@ -332,3 +332,7 @@ input[type="radio"] {
   input[type="radio"]:checked::before {
     transform: scale(1);
   } */
+
+  input:checked {
+      border: red;
+  }
