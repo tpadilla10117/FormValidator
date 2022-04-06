@@ -60,6 +60,7 @@
           
             <input class="bookADemo_form_input error" id="bookADemo_form_input" placeholder="Enter your business email" type="text" name="email" pattern="^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+.[a-zA-Z0-9-.]{2,61}$" oninvalid="setCustomValidity(`Please make sure this isn't a personal email address`), style='border:1px solid red', setIcon() " onchange="try{setCustomValidity('')}catch(e){}" >
             <i class="fas fa-exclamation-triangle failure-icon"></i>
+            <p class="errormsg">Please make sure this isn't a personal email address</p>
             <i class="far fa-check-circle success-icon"></i>
 
             <div class="bookADemo_dropdown_parentWrapper">

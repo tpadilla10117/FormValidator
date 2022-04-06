@@ -154,18 +154,21 @@ document.getElementById("bookADemo_dropdown_element").classList.toggle("active")
 /* This runs in the email input if Regex is false: */
     function setIcon() {
         failureIcon[0].style.opacity = "1";
+        errormsg.classList.toggle('active');
     }
+
+    let errormsg = document.querySelector('.errormsg');
+    /* errormsg.classList.toggle('active'); */
 
     let validationHandling = (id, serial, message) => {
         
         if (id.value.trim() === "" ) {
             errorMsg[serial].innerHTML = message;
             id.style.border = "1px solid #C41337";
-            
             failureIcon[serial].style.opacity = "1";
             successIcon[serial].style.opacity = "0";
             /* alert('An email is required.') */
-            
+           
             return 'An email is required.'
           } else if(regex.test(id.value) === false) {
             errorMsg[serial].innerHTML = message;

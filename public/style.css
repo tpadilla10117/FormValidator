@@ -109,6 +109,17 @@ h1, h3 {
   color: #C41337;
 }
 
+.errormsg {
+    display: none;
+}
+
+.errormsg.active {
+    display: block;
+    color: #C41337;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
 .success-icon {
   color: #00873F;
 }
