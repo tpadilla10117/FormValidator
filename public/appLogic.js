@@ -119,8 +119,8 @@ return (
 /* TODO: need to make sure getting right inputs : */
     const mappedBtns = radioBtns.map( (btns, index) => {
     return `<li class='radiobtn_content' key=${index}>
-                <input class='radiobtn_input' type='radio' key=${index} value=${btns.name} name="selector" onclick={radioHandler('${btns.name}')} />
-                <label key=${index} class='radiobtn_label' for=${btns.name}>${btns.name}</label> 
+                <input class='radiobtn_input' type='radio' key=${index} value='${btns.name}' name="selector" onclick={radioHandler(value)} />
+                <label key=${index} class='radiobtn_label' for='${btns.name}'>${btns.name}</label> 
             </li>
     `
     }).join('');
@@ -161,7 +161,6 @@ return (
             errorMsg[serial].innerHTML = message;
             id.style.border = "1px solid red";
             
-            // icons
             failureIcon[serial].style.opacity = "1";
             successIcon[serial].style.opacity = "0";
             console.log("An email is required")
@@ -170,9 +169,9 @@ return (
           } else if(regex.test(id.value) === false) {
             errorMsg[serial].innerHTML = message;
             id.style.border = "1px solid red";
-            /* id.setCustomValidity('Please enter business email'); */
+            
             console.log(regex.test(id.value))
-            // icons
+    
             failureIcon[serial].style.opacity = "1";
             successIcon[serial].style.opacity = "0";
           }
@@ -181,7 +180,6 @@ return (
             errorMsg[serial].innerHTML = "";
             id.style.border = "1px solid green";
             
-            // icons
             failureIcon[serial].style.opacity = "0";
             successIcon[serial].style.opacity = "1";
           }
@@ -193,4 +191,5 @@ return (
         console.log("Submitted a form")
         validationHandling(email, 0, "Email cannot be blank");
         console.log("Form data: ",formData )
+        console.log("Event: ", event.target)
     })
