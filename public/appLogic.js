@@ -112,6 +112,16 @@ function dropdownHandler(input) {
         document.querySelector('.bookADemo_form_textBox').value = text
     };
 
+/* Logic for toggle dropdown if click outside: */
+    document.addEventListener('click', function(event) {
+        let clickedInside = dropdownShow.contains(event.target);
+
+        if(!clickedInside) {
+            console.log("Clicked outside")
+            dropdownShow.classList.remove('active');
+        }
+    });
+
     const mappedItems = dropDownItems.map ((items, index) => {
         return `
             <li id='bookADemo_dropdown_li' class='bookADemo_dropdown_li' value='${items.name}' name='dropdownSelector' key=${index} onclick={show('${items.name}')}>${items.name}</li>
