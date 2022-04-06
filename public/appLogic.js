@@ -2,7 +2,6 @@
 /* When user clicks, toggle content: */
 function dropdownToggler() {
 document.getElementById("bookADemo_dropdown_element").classList.toggle("active");
-console.log("We clicked");
 };
 
 /* When user clicks outside of dropdown, close it: */
@@ -81,22 +80,6 @@ console.log("We clicked");
         },
     ];
 
-/* When user clicks, toggle content: */
-function dropdownHandler(input) {
-    console.log("Ran")
-    /* event.preventDefault(); */
-    /* let element = document.getElementById("bookADemo_dropdown_li"); */
-    console.log("The clicked element: ", input);
-    /* dropdownArr.push(input); */
-    return input;
-};
-
-    function dropdownValue(value) {
-       
-        console.log("We clicked the dropdown item")
-        console.log("Value from dropdownValue: ", value);
-        
-    }
 
 /* Logic to map out Business Size dropdown: */
     let businessDropdown = document.getElementById('dropdownOptions');
@@ -107,8 +90,6 @@ function dropdownHandler(input) {
     };
 
     function show(text) {
-        console.log("We clicked the dropdown item")
-        console.log("Value from dropdownValue: ", text);
         document.querySelector('.bookADemo_form_textBox').value = text
     };
 
@@ -117,7 +98,6 @@ function dropdownHandler(input) {
         let clickedInside = dropdownShow.contains(event.target);
 
         if(!clickedInside) {
-            console.log("Clicked outside")
             dropdownShow.classList.remove('active');
         }
     });
@@ -139,7 +119,6 @@ function dropdownHandler(input) {
         console.log(value)
     }
 
-/* TODO: need to make sure getting right inputs : */
     const mappedBtns = radioBtns.map( (btns, index) => {
     return `<li class='radiobtn_content' key=${index}>
                 <input class='radiobtn_input' type='radio' key=${index} value='${btns.name}' name="selector" onclick={radioHandler(value)} />
@@ -150,8 +129,7 @@ function dropdownHandler(input) {
 
     tester.innerHTML = mappedBtns;
 
-/* Logic for form btn state: */
-/* TODO: may need to change */
+/* TODO: Logic for form btn state: */
     function btnClicked() {
         let button = document.getElementById('bookADemo_form_btn');
         console.log("cleicked the button");
@@ -173,7 +151,7 @@ function dropdownHandler(input) {
     let formSelector = document.querySelector('bookADemo_form');
     let formData = new FormData(form);
 
-/* TODO: This runs in the email input if Regex is false: */
+/* This runs in the email input if Regex is false: */
     function setIcon() {
         failureIcon[0].style.opacity = "1";
     }
@@ -186,14 +164,12 @@ function dropdownHandler(input) {
             
             failureIcon[serial].style.opacity = "1";
             successIcon[serial].style.opacity = "0";
-            console.log("An email is required")
+            /* alert('An email is required.') */
             
             return 'An email is required.'
           } else if(regex.test(id.value) === false) {
             errorMsg[serial].innerHTML = message;
             id.style.border = "1px solid #C41337";
-            
-            console.log(regex.test(id.value))
     
             failureIcon[serial].style.opacity = "1";
             successIcon[serial].style.opacity = "0";
@@ -211,23 +187,24 @@ function dropdownHandler(input) {
     /* Submit event listener: */
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-        console.log("Submitted a form")
+       /*  console.log("Submitted a form")
         console.log("An email address from submitted form: ", form['email'].value)
         console.log("The radio selection: ", form['selector'].value)
-        console.log("The dropdown value: ", document.querySelector('.bookADemo_form_textBox').value );
+        console.log("The dropdown value: ", document.querySelector('.bookADemo_form_textBox').value ); */
         
         validationHandling(email, 0, "Email cannot be blank");
-        console.log("Form data: ",formData )
 
         if(form['selector'].value === 'Document Storage' 
             || form['selector'].value === 'Price' 
             || form['selector'].value === 'Full Text Search'
             || document.querySelector('.bookADemo_form_textBox').value === '1-10') {
 
-            console.log("This is unqualified")
+            /* console.log("This is unqualified") */
             window.location.href = "./unqualifiedPg.html";
 
         } else if(form['email'].value && form['selector'].value && document.querySelector('.bookADemo_form_textBox').value) {
             window.location.href = "./qualifiedPg.html"
+        } else if(!form['email'].value || !form['selector'].value || !document.querySelector('.bookADemo_form_textBox').value) {
+            alert('Please complete the form before submitting')
         }
     });
