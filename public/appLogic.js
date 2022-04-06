@@ -204,7 +204,7 @@ function dropdownHandler(input) {
         console.log("Submitted a form")
         console.log("An email address from submitted form: ", form['email'].value)
         console.log("The radio selection: ", form['selector'].value)
-        console.log("The dropdown value: ", form['drop'].value);
+        console.log("The dropdown value: ", document.querySelector('.bookADemo_form_textBox').value );
         
         validationHandling(email, 0, "Email cannot be blank");
         console.log("Form data: ",formData )
@@ -212,12 +212,12 @@ function dropdownHandler(input) {
         if(form['selector'].value === 'Document Storage' 
             || form['selector'].value === 'Price' 
             || form['selector'].value === 'Full Text Search'
-            || form['drop'].value === '1-10') {
+            || document.querySelector('.bookADemo_form_textBox').value === '1-10') {
 
             console.log("This is unqualified")
             window.location.href = "./unqualifiedPg.html";
 
-        } else if(form['email'].value && form['selector'].value && form['drop'].value) {
+        } else if(form['email'].value && form['selector'].value && document.querySelector('.bookADemo_form_textBox').value) {
             window.location.href = "./qualifiedPg.html"
         }
     });
