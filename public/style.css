@@ -24,6 +24,7 @@ h1, h3 {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .nav_bar {
@@ -105,11 +106,11 @@ h1, h3 {
 }
 
 .failure-icon {
-  color: red;
+  color: #C41337;
 }
 
 .success-icon {
-  color: green;
+  color: #00873F;
 }
 
 .failure-icon, .success-icon {
@@ -170,7 +171,7 @@ input.bookADemo_form_input::placeholder {
 }
 
 input.bookADemo_form_input:invalid {
-    border-color: red;
+    border-color: #C41337;
 }
 
 input.bookADemo_form_input:focus {

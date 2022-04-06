@@ -182,7 +182,7 @@ function dropdownHandler(input) {
         
         if (id.value.trim() === "" ) {
             errorMsg[serial].innerHTML = message;
-            id.style.border = "1px solid red";
+            id.style.border = "1px solid #C41337";
             
             failureIcon[serial].style.opacity = "1";
             successIcon[serial].style.opacity = "0";
@@ -191,7 +191,7 @@ function dropdownHandler(input) {
             return 'An email is required.'
           } else if(regex.test(id.value) === false) {
             errorMsg[serial].innerHTML = message;
-            id.style.border = "1px solid red";
+            id.style.border = "1px solid #C41337";
             
             console.log(regex.test(id.value))
     
@@ -201,7 +201,7 @@ function dropdownHandler(input) {
           
           else {
             errorMsg[serial].innerHTML = "";
-            id.style.border = "1px solid green";
+            id.style.border = "1px solid #00873F";
             
             failureIcon[serial].style.opacity = "0";
             successIcon[serial].style.opacity = "1";
