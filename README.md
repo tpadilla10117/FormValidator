@@ -8,7 +8,6 @@
 * [Cloning Instructions](#cloning-instructions)
 * [Tech Stack](#tech-stack)
 * [Limitations](#limitations)
-<!-- * [TroubleShooting](#troubleshooting--bugs) -->
 * [Scripts](#available-scripts)
 
 ## Deployment:
