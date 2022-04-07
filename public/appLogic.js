@@ -154,7 +154,7 @@ document.getElementById("bookADemo_dropdown_element").classList.toggle("active")
 /* This runs in the email input if Regex is false: */
     function setIcon() {
         failureIcon[0].style.opacity = "1";
-        errormsg.classList.toggle('active');
+        errormsg.classList.add('active');
     }
 
     let errormsg = document.querySelector('.errormsg');
@@ -184,6 +184,7 @@ document.getElementById("bookADemo_dropdown_element").classList.toggle("active")
             
             failureIcon[serial].style.opacity = "0";
             successIcon[serial].style.opacity = "1";
+            errormsg.classList.remove('active');
           }
     }
     
@@ -210,4 +211,5 @@ document.getElementById("bookADemo_dropdown_element").classList.toggle("active")
         } else if(!form['email'].value || !form['selector'].value || !document.querySelector('.bookADemo_form_textBox').value) {
             alert('Please complete the form before submitting')
         }
+        
     });
