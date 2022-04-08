@@ -11,6 +11,7 @@
 * [Scripts](#available-scripts)
 
 ## Deployment:
+- Netlify Deploy: (https://eloquent-platypus-684d7f.netlify.app)
 
 ## Usage Instructions:
 - 1) In the "Book a Demo" form, enter in a business email & select a business size from the dropdown menu

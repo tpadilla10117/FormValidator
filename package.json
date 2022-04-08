@@ -10,6 +10,7 @@
     "node": "^17.7.2",
     "nth-check": "^2.0.1",
     "postcss": "^8.4.6",
+    "react-scripts": "^5.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -35,5 +36,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "- A frontend web-application written in Vanilla JS featuring form validation & page redirect.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpadilla10117/singlestore_web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tpadilla10117/singlestore_web/issues"
+  },
+  "homepage": "https://github.com/tpadilla10117/singlestore_web#readme"
 }
