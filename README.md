@@ -1,6 +1,6 @@
 # App Description
 
-- A frontend web-application written in Vanilla JS featuring form validation and page redirect.
+- A frontend web-application written in Vanilla JS featuring form validation & page redirect.
 
 ## Table of Contents:
 * [Deployment](#Deployment)
